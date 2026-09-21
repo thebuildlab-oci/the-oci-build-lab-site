@@ -5,10 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="The OCI Build Lab — practical OCI builds, security baselines, and free-tier-aware cloud engineering.">
     <title>The OCI Build Lab — Build real products. Run them responsibly.</title>
+    <link rel="canonical" href="https://www.thebuildlab.dev/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="The OCI Build Lab">
+    <meta property="og:title" content="Build real products. Run them responsibly.">
+    <meta property="og:description" content="Practical OCI guides, cost-aware builds and open-source projects. Follow The Build Lab and help shape what we build next.">
+    <meta property="og:url" content="https://www.thebuildlab.dev/">
+    <meta property="og:image" content="https://www.thebuildlab.dev/theBuildLabs_Logo.png">
+    <meta property="og:image:alt" content="The Build Lab red, blue and charcoal geometric logo">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@TheBuildLabOCI">
+    <meta name="twitter:title" content="The OCI Build Lab">
+    <meta name="twitter:description" content="Build real products. Run them responsibly. Practical OCI guides, cost-aware builds and reusable code.">
+    <meta name="twitter:image" content="https://www.thebuildlab.dev/theBuildLabs_Logo.png">
+    <meta name="twitter:image:alt" content="The Build Lab red, blue and charcoal geometric logo">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="social.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -19,6 +34,7 @@
       <nav aria-label="Primary navigation">
         <a href="#series">Series</a>
         <a href="#principles">Principles</a>
+        <a href="#community">Community</a>
         <a href="https://github.com/thebuildlab-oci/oci-free-tier-labs">Labs</a>
       </nav>
     </header>
@@ -64,6 +80,38 @@
         </div>
       </section>
 
+      <section class="community" id="community" aria-labelledby="community-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">BUILD WITH US</p><h2 id="community-title">Follow the lab.<br>Shape the next build.</h2></div>
+          <p>Videos, guides and reusable code are coming soon. Have a question or a topic in mind? Tell us on X or LinkedIn.</p>
+        </div>
+        <div class="social-grid">
+          <a class="social-card" href="https://x.com/TheBuildLabOCI" target="_blank" rel="noopener noreferrer" aria-label="Follow The Build Lab on X (opens in a new tab)">
+            <span class="social-mark" aria-hidden="true">𝕏</span><span><strong>Follow on X</strong><small>@TheBuildLabOCI</small></span><span class="social-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="social-card" href="https://www.linkedin.com/company/the-build-lab-nz/" target="_blank" rel="noopener noreferrer" aria-label="Follow The Build Lab NZ on LinkedIn (opens in a new tab)">
+            <span class="social-mark social-mark-linkedin" aria-hidden="true">in</span><span><strong>Follow on LinkedIn</strong><small>The Build Lab NZ</small></span><span class="social-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="social-card" href="https://github.com/thebuildlab-oci" target="_blank" rel="noopener noreferrer" aria-label="Explore The OCI Build Lab on GitHub (opens in a new tab)">
+            <span class="social-mark social-mark-code" aria-hidden="true">&lt;/&gt;</span><span><strong>Explore the code</strong><small>GitHub · thebuildlab-oci</small></span><span class="social-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="share-panel">
+          <div><h3>Know another curious builder?</h3><p>Share the lab with them.</p></div>
+          <div class="share-actions" role="group" aria-label="Share this website">
+            <a class="share-button" href="https://x.com/intent/tweet?text=Build%20real%20products.%20Run%20them%20responsibly.%20Explore%20The%20OCI%20Build%20Lab.&amp;url=https%3A%2F%2Fwww.thebuildlab.dev%2F&amp;via=TheBuildLabOCI" target="_blank" rel="noopener noreferrer" aria-label="Share the website on X (opens in a new tab)">Share on X ↗</a>
+            <a class="share-button" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.thebuildlab.dev%2F" target="_blank" rel="noopener noreferrer" aria-label="Share the website on LinkedIn (opens in a new tab)">Share on LinkedIn ↗</a>
+            <button class="share-button" id="copy-link" type="button" hidden>Copy link</button>
+          </div>
+          <p class="share-status" id="share-status" role="status" aria-live="polite"></p>
+          <div id="copy-fallback" hidden>
+            <label for="share-url">Copy this website address:</label>
+            <input id="share-url" type="url" value="https://www.thebuildlab.dev/" readonly>
+          </div>
+          <p class="share-note">Sharing opens a draft in your account. Nothing is posted automatically.</p>
+        </div>
+      </section>
+
       <section class="cta">
         <p class="eyebrow">MAKE THE NEXT BUILD REPEATABLE</p>
         <h2>Start with the code.</h2>
@@ -74,7 +122,11 @@
     <footer>
       <a class="brand" href="#top"><img src="https://github.com/thebuildlab-oci.png?size=256" alt=""><span>The OCI Build Lab</span></a>
       <p>Independent educational content; not affiliated with or endorsed by Oracle.</p>
-      <a href="https://github.com/thebuildlab-oci">GitHub ↗</a>
+      <nav class="footer-social" aria-label="Social profiles">
+        <a href="https://x.com/TheBuildLabOCI">X ↗</a>
+        <a href="https://www.linkedin.com/company/the-build-lab-nz/">LinkedIn ↗</a>
+        <a href="https://github.com/thebuildlab-oci">GitHub ↗</a>
+      </nav>
     </footer>
   </body>
 </html>

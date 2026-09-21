@@ -3,6 +3,9 @@
 html { scroll-behavior:smooth; }
 body { margin:0; color:var(--paper); background:var(--ink); font-family:Manrope,Arial,sans-serif; }
 a { color:inherit; text-decoration:none; }
+button, input { font:inherit; }
+[hidden] { display:none !important; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline:3px solid #7fc0ff; outline-offset:5px; }
 .site-header, main, footer { width:min(1180px, calc(100% - 40px)); margin:auto; }
 .site-header { height:88px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid rgba(255,255,255,.12); }
 .brand { display:inline-flex; align-items:center; gap:11px; font-weight:800; letter-spacing:-.03em; }
@@ -19,3 +22,31 @@ h1,h2,h3,p { margin-top:0; } h1 { font-size:clamp(2.8rem,6vw,5.6rem); letter-spa
 .cta { margin:36px auto 90px; padding:70px clamp(24px,7vw,90px); text-align:center; background:var(--red); position:relative; overflow:hidden; }.cta:after { content:""; position:absolute; width:380px; height:380px; right:-130px; top:-220px; border:48px solid rgba(255,255,255,.16); transform:rotate(40deg); }.cta .eyebrow { color:#ffd7d7; }.cta h2 { position:relative; z-index:1; margin-bottom:30px; }.cta .button-primary { background:var(--ink); border-color:var(--ink); box-shadow:7px 7px 0 var(--blue); position:relative; z-index:1; }
 footer { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:28px 0 42px; color:#8d9caf; font-size:.75rem; border-top:1px solid rgba(255,255,255,.13); } footer .brand { color:white; } footer .brand img { width:24px; height:24px; } footer a:last-child { color:#d4e8ff; font-weight:800; }
 @media (max-width:760px) { .site-header { height:72px; }.site-header nav { display:none; }.hero { grid-template-columns:1fr; gap:42px; padding:86px 0 80px; }.build-card { max-width:430px; }.principle-grid,.series-grid { grid-template-columns:1fr; }.statement,.series { padding:70px 0; }.section-heading,footer { align-items:flex-start; flex-direction:column; }.cta { margin-bottom:55px; }.grid-glow { inset:0 -40vw 0 0; } }
+
+.community { padding:85px 0; border-top:1px solid rgba(255,255,255,.13); scroll-margin-top:28px; }
+.social-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:15px; margin:32px 0; }
+.social-card { display:flex; align-items:center; gap:14px; min-height:108px; padding:22px; background:var(--panel); border:1px solid #36475d; }
+.social-card:hover { border-color:#72b3f4; background:#1c2c41; }
+.social-card strong, .social-card small { display:block; }
+.social-card strong { font-size:.96rem; }
+.social-card small { color:#b4c2d2; font-size:.75rem; margin-top:8px; overflow-wrap:anywhere; }
+.social-mark { display:grid; place-items:center; flex-shrink:0; width:35px; height:35px; font-size:1.8rem; }
+.social-mark-linkedin { background:#126ac4; font:bold 1.4rem Arial,sans-serif; border-radius:4px; }
+.social-mark-code { color:#8ebeea; font:500 1rem "DM Mono",monospace; }
+.social-arrow { margin-left:auto; color:#8ebeea; }
+.share-panel { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px; padding:28px; border:1px solid #36475d; border-left:3px solid var(--red); background:linear-gradient(110deg,#172131,#111923); }
+.share-panel h3 { font-size:1.05rem; margin-bottom:8px; }
+.share-panel p { margin-bottom:0; color:#b4c2d2; font-size:.85rem; line-height:1.6; }
+.share-actions { display:flex; flex-wrap:wrap; gap:10px; }
+.share-button { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:11px 14px; color:var(--paper); background:#202e40; border:1px solid #52657c; font-size:.8rem; font-weight:700; cursor:pointer; }
+.share-button:hover { background:#30465f; border-color:#8ebeea; }
+.share-status, .share-note, #copy-fallback { flex-basis:100%; }
+.share-status:empty { display:none; }
+.share-panel .share-status { color:#cbe4ff; }
+.share-panel .share-note { font-size:.73rem; }
+#copy-fallback label { display:block; font-size:.85rem; margin-bottom:10px; }
+#share-url { width:100%; max-width:440px; padding:12px; background:#101723; color:#fff; border:1px solid #8ebeea; }
+.footer-social { flex-wrap:wrap; gap:18px; font-size:.8rem; }
+@media (max-width:1000px) { .social-grid { grid-template-columns:1fr; } .social-card { min-height:90px; } }
+@media (max-width:760px) { .community { padding:65px 0; } .share-panel { padding:22px; } .share-actions { width:100%; } .share-button { flex:1 1 145px; } }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
